@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	char line, col, spaces, n;
-	n = 8;
+	int line, col, spaces, n;
+
+	printf("Type the amount of lines you wish\n");
+	scanf("%d", &n);
+
 	for (line = n; line > 0; line--) {
 		for (spaces = 1; spaces <= line-1; spaces++) {
 			printf(" ");
