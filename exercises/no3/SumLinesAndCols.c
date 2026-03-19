@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    // Write a program that fills a 5×10 integer matrix,
-    // computes the sum of each row and column storing them in separate vectors,
-    // and prints the matrix along with both vectors labeled as row sums and column sums.
 
+// Write a program that fills a 5×10 integer matrix,
+// computes the sum of each row and column storing them in separate vectors,
+// and prints the matrix along with both vectors labeled as row sums and column sums.
+int main() {
     srand(time(NULL));
     int mat[5][10] = {0};
     int lines[5], cols[10], i, j;

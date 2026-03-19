@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Sum up each element of a matrix
 int main() {
-    // Sum up each element of an matrix
     int mat[3][3];
     int sum = 0;
     srand (time(NULL));

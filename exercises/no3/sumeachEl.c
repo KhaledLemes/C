@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Given two 3×3 matrices A and B, write a program to calculate the sum of the matrices and store it in a matrix C. Print all three matrices.
 int main() {
-    // Given two 3×3 matrices A and B, write a program to calculate the sum of the matrices and store it in a matrix C. Print all three matrices.
     int A[3][3], B[3][3], C[3][3];
     srand (time(NULL));
 
