@@ -9,8 +9,9 @@ int main() {
     int col = 4;
     int mat[lin][col];
 
-    printf("MATRIX:\n\t");
+    printf("MATRIX:");
     for (int i = 0; i < lin; i++) {
+        printf("\n\t");
         for (int j = 0; j < col; j++){
             mat[i][j] = 1 + (rand() % 99);
             // Just puts a 0 on the left if it is a digit number for better visuals
@@ -19,19 +20,26 @@ int main() {
             } else
                 printf("%d ", mat[i][j]);
         }
-        printf("\n\t");
     }
-    printf("\n");
-    printf("Under main diagonal:");
+    printf("\nUNDER SECONDARY DIAGONAL:");
+        for (int i = 0; i < 4; i++) {
+            printf("\n\t");
+            for (int j = 4-i; !(j > 3); j++) {
+                if (mat[i][j] <= 10) {
+                    printf("0%d ", mat[i][j]);
+                } else
+                    printf("%d ", mat[i][j]);
+            }
+    }
+    printf("\nUNDER MAIN DIAGONAL:");
     for (int i = 0; i < 4; i++) {
+        printf("\n\t");
         for (int j = 0; j < i; j++) {
             if (mat[i][j] < 10) {
                 printf("0%d ", mat[i][j]);
             } else
                 printf("%d ", mat[i][j]);
         }
-        printf("\n\t");
     }
-
     return 0;
 }
