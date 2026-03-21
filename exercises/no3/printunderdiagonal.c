@@ -24,8 +24,8 @@ int main() {
     printf("\nUNDER SECONDARY DIAGONAL:");
         for (int i = 0; i < 4; i++) {
             printf("\n\t");
-            for (int j = 4-i; !(j > 3); j++) {
-                if (mat[i][j] <= 10) {
+            for (int j = 3; j >= 4-i; j--) {
+                if (mat[i][j] < 10) {
                     printf("0%d ", mat[i][j]);
                 } else
                     printf("%d ", mat[i][j]);

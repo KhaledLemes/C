@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// Check if the 4x4 matrix is a magic square
+int main() {
+    srand(time(NULL));
+    int lin = 4;
+    int col = 4;
+    int mat[lin][col];
+
+    printf("MATRIX:");
+    for (int i = 0; i < lin; i++) {
+        printf("\n\t");
+        for (int j = 0; j < col; j++){
+            mat[i][j] = 1 + (rand() % 99);
+            // Just puts a 0 on the left if it is a digit number for better visuals
+            if (mat[i][j] < 10) {
+                printf("0%d ", mat[i][j]);
+            } else
+                printf("%d ", mat[i][j]);
+        }
+    }
+    return 0;
+}
