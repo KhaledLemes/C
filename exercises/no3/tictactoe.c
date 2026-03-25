@@ -38,7 +38,7 @@ int main() {
             for (int j = 0; j < 3; j++) {
                 sum += game[i][j];
                 if (sum == 264 || sum == 237) {
-                    printf("\nCongratulations! %c is the winner", current);
+                    printf("Congratulations! %c is the winner\n", current);
                     winner = 1;
                     break;
                 }
@@ -49,7 +49,7 @@ int main() {
             for (int j = 0; j < 3; j++) {
                 sum += game[j][i];
                 if (sum == 264 || sum == 237) {
-                    printf("\nCongratulations! %c is the winner", current);
+                    printf("Congratulations! %c is the winner\n", current);
                     winner = 1;
                     break;
                 }
@@ -59,7 +59,7 @@ int main() {
         for (int i = 0; i < 3; i++) {
             sum += game[i][i];
             if (sum == 264 || sum == 237) {
-                printf("\nCongratulations! %c is the winner", current);
+                printf("Congratulations! %c is the winner\n", current);
                 winner = 1;
                 break;
             }
@@ -68,7 +68,7 @@ int main() {
         for (int i = 0; i < 3; i++) {
             sum += game[i][2-i];
             if (sum == 264 || sum == 237) {
-                printf("\nCongratulations! %c is the winner", current);
+                printf("Congratulations! %c is the winner\n", current);
                 winner = 1;
                 break;
             }
@@ -78,9 +78,15 @@ int main() {
         else
             current = 'X';
         attempt++;
-        if (attempt == 9 && winner == 0)
-            printf("Draw :(");
-        else if (winner) {
+        if (attempt == 9 && winner == 0) {
+            printf("Draw :(\nFinal result:");
+            for (int i = 0; i < 3; i++) {
+                printf("\n");
+                for (int j = 0; j < 3; j++) {
+                    game[i][j] == 0 ? printf("- ") : printf("%c ", game[i][j]);
+                }
+            }
+        } else if (winner) {
                 printf("Final result:");
                 for (int i = 0; i < 3; i++) {
                     printf("\n");
