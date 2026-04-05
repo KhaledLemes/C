@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 // Create a program that copies a string without built-in functions
 int main() {
