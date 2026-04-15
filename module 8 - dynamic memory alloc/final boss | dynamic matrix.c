@@ -14,7 +14,7 @@ int main() {
             return 11;
         }
         for (int j = 0; j < col; j++) {
-            mat[i][j] = j;
+            *(*(mat+i)+j) = j;
         }
     }
     for (int i = 0; i < lin; i++) {
