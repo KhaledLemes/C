@@ -2,14 +2,13 @@
 #include <string.h>
 
 typedef struct {
-    char name[100];
+    char name[50];
     int age;
 }Person;
 
 int main() {
     FILE *f = fopen("bin.txt", "rb");
-            getchar();
-    char str[100]; Person p;
+    Person p;
 
     if (f) {
         while (fread(&p, sizeof(Person), 1, f)) {

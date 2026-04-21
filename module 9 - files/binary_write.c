@@ -13,11 +13,10 @@ int main() {
     if (f) {
         while (option) {
             printf("Write a name to the person: ");
-            fgets(p.name, sizeof(p.name), stdin);
-            printf("Now an age: ");
-            scanf("%d", &p.age);
-            printf("Type 0 to stop ");
+            scanf("%s%d", p.name, &p.age);
+            getchar();
             fwrite(&p, sizeof(Person), 1, f);
+            printf("Type 0 to stop ");
             scanf("%d", &option);
             getchar();
         }
