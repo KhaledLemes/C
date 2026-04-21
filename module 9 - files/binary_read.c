@@ -1,3 +1,22 @@
-//
-// Created by khal on 20/04/2026.
-//
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char name[100];
+    int age;
+}Person;
+
+int main() {
+    FILE *f = fopen("bin.txt", "rb");
+            getchar();
+    char str[100]; Person p;
+
+    if (f) {
+        while (fread(&p, sizeof(Person), 1, f)) {
+            printf("name: %s\nage: %d\n\n", p.name, p.age);
+        }
+    }
+    else
+        printf("coding isn't really for u man");
+    return 0;
+}
