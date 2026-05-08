@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "../headers/pile.h"
 
 // Each node holds a value and a pointer to the node below.
-typedef struct node {
-    int n; // Value
-    struct node *below; // Points to node below it
-}Node;
-
 Node *create() {
     return NULL;
 }
@@ -31,18 +27,10 @@ Node *pop(Node **top) {
     return NULL;
 }
 
-int main() {
-    Node *pile = create();
-    push(&pile, 1);
-    printf("%d %p\n", pile->n, pile->below);
-    push(&pile, 2);
-    printf("%d %p\n", pile->n, pile->below);
-    push(&pile, 3);
-    printf("%d %p\n", pile->n, pile->below);
-
-    Node *old = pop(&pile);
-    printf("\nOld top value: %d\nNew top value: %d", old->n, pile->n);
-    free(pile);
-    free(old);
-    return 0;
+void print(Node *top) {
+    if (top) {
+        printf("\n%d", top->n);
+        top = top->below;
+        print(top);
+    }
 }
