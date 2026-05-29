@@ -38,7 +38,7 @@ int insert_to_line(Line *line, int n) {
     if (new) {
         new->n = n;
         new->next = NULL;
-        if (n < 60) {
+        if (n < 60 || line->start == NULL) {
             // Priority is numbers above 59
             non_priority_insert(line, new);
             return 0;
