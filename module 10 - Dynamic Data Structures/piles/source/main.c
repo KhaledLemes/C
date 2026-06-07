@@ -19,5 +19,6 @@ int main() {
     printf("\n");
     free(pile);
     free(old);
-    return 0;
+    
+		return 0;
 }
